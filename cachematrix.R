@@ -1,5 +1,5 @@
 ## 
-## The following to functions improve the performance of the 'solve()' when it is used
+## The following two functions improve the performance of the 'solve()' when it is used
 ## for the purpose of calculating the inverse of a matrix, by means of encapsulation and 
 ## catching
 ##
