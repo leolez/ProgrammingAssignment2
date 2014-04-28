@@ -6,7 +6,7 @@
 
 ## The makeCache Matrix function returns a 'list' including the functions 
 ## 'set', 'get', 'setInvMat' and 'getInvMat' that encapsulate the interaction
-## with the matrix received as parameter and make the caching process as transparent
+## with the matrix received as parameter and makes the caching process as transparent
 ## as possible for the user, following OOP patterns.
 
 makeCacheMatrix <- function(x = matrix()) {  
@@ -24,8 +24,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The 'cacheSolve()' function updates the inverse of matrix only when there is 
-## no previous calculation of the inverse for that same matrix.
+## The 'cacheSolve()' function updates and returns the inverse of the matrix received
+## as the 'x' parameter. If there is a previous calculation of the inverse of that
+## same matrix, then the cached inverse is returned and no calculation is invoked.
+## Please note that the matrix received as the 'x' parameter is expected to be 
+## the result of the 'makeCacheMatrix()'
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
